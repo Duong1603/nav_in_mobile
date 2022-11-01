@@ -3,8 +3,6 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Favourite from '../screens/Favourite';
 import MyBooking from '../screens/Mybooking';
-import Chat from '../screens/Chat';
-import Setting from '../screens/Setting';
 import Home from '../screens/Home';
 // import Homepage from '../screens/Hompage';
 
@@ -96,7 +94,7 @@ const BottomTabs = () =>
         }}
       />
 
-      
+
     </BottomTab.Navigator>
   );
 };

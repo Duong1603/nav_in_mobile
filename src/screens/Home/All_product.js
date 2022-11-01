@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { FlatList, Text, View, StyleSheet, ScrollView, Image, SafeAreaView } from 'react-native';
+import { FlatList, Text, View, StyleSheet, ScrollView, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 
 const Item = ({ name, image }) =>
 {
     return (
         <View style={styles.item}>
-            <Image style={styles.imageCard} source={{ uri: image}} />
+            <Image style={styles.imageCard} source={{ uri: image }} />
             <Text style={styles.titleCard}>{name}</Text>
         </View>
     );
 }
-export default function CardCreateCard()
+export default function CardCreateCard({ navigation })
 {
 
     const allpr = [
@@ -63,6 +63,7 @@ export default function CardCreateCard()
 
     return (
         <View style={styles.cards}>
+
             <FlatList style={styles.card}
                 numColumns={2}
                 data={allpr}
