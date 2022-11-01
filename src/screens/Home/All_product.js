@@ -58,7 +58,17 @@ export default function CardCreateCard({ navigation })
     ];
 
     const renderItem = ({ item }) => (
-        <Item name={item.name} image={item.image} />
+        // <Item name={item.name} image={item.image} />
+
+        <TouchableOpacity
+            onPress={() =>
+            {
+                navigation.navigate('allpr', { headerTitle: 'Product 2' });
+            }}
+            style={styles.item}>
+            <Image style={styles.imageCard} source={{ uri: item.image }} />
+            <Text>{item?.name}</Text>
+        </TouchableOpacity>
     );
 
     return (
